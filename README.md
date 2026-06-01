@@ -1,12 +1,31 @@
-# gaussian_process_models
-In this project we are exploring GP models to map NV ODMR and PL spectra onto a thermodynamic variable of interest.
-In published results GP (Matren kernel) do a good job of capturing ODMR spectra and mapping it on temp with unceratinty of > 1K 
+# Gaussian Process Models for NV Sensing
 
-Here we will testing out:
+## Overview
+Exploring GP models to map NV ODMR and PL spectra onto thermodynamic variables of interest.
+Published results show GP with Matérn kernel captures ODMR spectra well, mapping to temperature with uncertainty < 1K.
 
-* diff kernels
-* expanding to PL spectra
-* using sparse GP, using latent represenation to fuse GP output with:
-  * deep learning activations
-  * ODMR with PL
+## Data
+- ODMR/ESR data: `./nv_odmr/`
+- PL data: `./pl_data/`
+- Experiments: `./gaussian_process_models/`
+
+## Roadmap
+
+### 1. ODMR Spectra Modeling
+- [ ] Test different kernels for ODMR spectra
+- [ ] Sparse GP for ODMR spectra
+
+### 2. PL Spectra Modeling
+- [ ] Expand to PL spectra with RQ and RBF kernels
+- [ ] Sparse GP for PL spectra
+
+### 3. Latent Representation & Fusion
+- [ ] Learn latent representations of ODMR and PL data
+- [ ] Fuse GP output with deep learning activations
+- [ ] Fuse ODMR and PL using Kalman filters (on model output)
+- [ ] Fuse ODMR and PL using Kalman filters (on latent output)
+
+## Benchmarking
+- Compare GP fusion vs neural network based fusion
+
  
