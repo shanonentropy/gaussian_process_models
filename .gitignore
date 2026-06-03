@@ -1,0 +1,13 @@
+# Virtual environments
+.venv/
+venv/
+env/
+proba/
+
+# Python / notebook noise
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
